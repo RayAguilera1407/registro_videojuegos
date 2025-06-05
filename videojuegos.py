@@ -33,6 +33,14 @@ while True:
             print("4. Nintendo Switch")
 
             plataforma_codigo = int(input("Seleccione el número de la plataforma: "))
+            try:
+                while True:
+                    if plataforma_codigo>0:
+                        break
+                else:
+                    print("Error! debe ingresar un número mayor a 0!")
+            except ValueError:
+                print("Error!! debe ingresar solo números!!!")
             plataforma = plataformas[plataforma_codigo - 1]
 
             videojuego = {
